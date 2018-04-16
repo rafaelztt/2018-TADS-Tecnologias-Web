@@ -1,0 +1,44 @@
+
+body{
+  background-color: #DADADA;
+}
+
+.login{
+  border: solid 1px #AFAFAF;
+  width: 300px;
+  margin: 10px auto;
+  padding: 50px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.campo{
+  padding: 15px 10px;
+  width: 250px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: solid 1px #afafaf;
+}
+
+.login img{
+  margin-bottom: 10px;
+}
+
+.botao{
+  padding: 10px 30px;
+  background-color: #3399ff;
+  border: solid 1px #003366;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+/*Propriedade que faz alterações em um elemento
+quando o mouse passa/está em cima dele*/
+.botao:hover{
+  background-color: #0073e6;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
