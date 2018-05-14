@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Layout com lateral</title>
+
+    <style>
+      *{
+        /*"Colar" todos os elementos*/
+        margin: 0;
+        padding: 0;
+      }
+      .lateral{
+        float: left;
+        width: 20%;
+
+        /*Apenas para visualizar sem conteúdo*/
+        height: 300px;
+        background: yellow;
+      }
+
+      .conteudo{
+        float: left;
+        width: 80%;
+        /*Apenas para visualizar sem conteúdo*/
+        height: 300px;
+        background: grey;
+      }
+
+      .limparFloat{
+        clear: both;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="topo">
+      Logo, imagens, texto, menu, etc
+    </div>
+
+    <div class="lateral">
+      Aqui fica o menu lateral
+    </div>
+
+    <div class="conteudo">
+      Conteúdo do site
+    </div>
+
+    <div class="limparFloat"></div>
+
+    <div class="rodape">
+      Desenvolvido por Rafael
+    </div>
+
+  </body>
+</html>
