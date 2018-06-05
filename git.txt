@@ -1,0 +1,9 @@
+git clone https://github.com/rafaelztt/tecnologias_web.git
+
+git add *
+
+git config user.email "rafael.zottesso@ifpr.edu.br"
+
+git commit -m ".."
+
+git push origin master
