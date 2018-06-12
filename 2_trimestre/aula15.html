@@ -10,19 +10,35 @@
 
       $(document).ready( function(){
 
+        alert("Pesquisar sobre as funções: text(), css(), prop()");
+
+          // Quando clicar no botão IR
           $("#btnIr").click( function(){
 
+            // pega o input que tem o name='q' nas propriedades
+            // as áspas podem ser simples ou duplas, não importa
+            // .val() pega o valor atual do campo, se ele for vazio --> ""
             if( $("input[name='q']").val() == "" ){
+              // Exibe um alerta na tela
               alert("Preencha alguma coisa para pesquisar!");
+              // pega o input que tem o name='q' nas propriedades e da foco
+              $("input[name='q']").focus();
 
+
+            // pega o input que tem o name='q' nas propriedades e da foco
+            // e verifica o comprimento do texto digitado. Se for menor que três...
             } else if( $("input[name='q']").val().length < 3 ){
+              // Exibe um alerta na tela
               alert("Digite mais do que 2 caracteres");
+              // pega o input que tem o name='q' nas propriedades e da foco
+              $("input[name='q']").focus();
 
             } else {
-
+                // Se não, ou seja, se tudo estiver ok... Envia (submete) o formulário
                 $("#formGoogle").submit();
 
             }
+
 
           });
 
@@ -38,11 +54,11 @@
     <!-- O action representa o destino dos dados deste formulário
     O method como esses dados serão enviados:
       get - manda pela url
-      post - manda empacotado -->
+      post - manda empacotado -->#btnIr
     <form id="formRegistrar" action="" method="post">
 
       <!-- label serve só para apresentar um texto na tela junto com o campo -->
-      <label>Nascimento</label><br>
+      <label>Nascimento<#btnIr/label><br>
       <!-- O input serve de entrada de dados e pode ter vários tipos (type). Ele
       já é definido no HTML e temos que usar os existentes.
         O name é utilizado para identificar esses dados no servidor. Quem define
