@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 15 - Validação de Formulários</title>
+
+    <script src="js/jquery-3.3.1.js"> </script>
+
+    <script type="text/javascript">
+
+      $(document).ready( function(){
+
+          alert("Ok!");
+
+      });
+
+    </script>
+
+  </head>
+  <body>
+
+    <h3>Cadastro</h3>
+
+    <!-- O action representa o destino dos dados deste formulário
+    O method como esses dados serão enviados:
+      get - manda pela url
+      post - manda empacotado -->
+    <form action="" method="post">
+
+      <!-- label serve só para apresentar um texto na tela junto com o campo -->
+      <label>Nascimento</label><br>
+      <!-- O input serve de entrada de dados e pode ter vários tipos (type). Ele
+      já é definido no HTML e temos que usar os existentes.
+        O name é utilizado para identificar esses dados no servidor. Quem define
+      é o programador. -->
+      <input type="date" name="nasc" value=""><br>
+
+      <label>Usuário</label><br>
+      <input type="text" name="usuario" value="" placeholder="Digite um nome de usuário"><br>
+
+      <label>E-mail</label><br>
+      <input type="email" name="email" value="" placeholder="fulano@tal.com"><br>
+
+      <label>Senha</label><br>
+      <input type="password" name="senha" value="" placeholder="Máximo 8 caracteres" maxlength="8"><br>
+
+      <label>Plano</label><br>
+      <!-- O select é aquela caixa de seleção com várias opções.
+      A ordem das opções (option) é a mesma que aparece na tela.
+      A primeira serve apenas de informação para o usuário e fica vazia mesmo. -->
+      <select name="plano">
+        <option value="">Selecione um plano</option>
+        <option value="0">Free</option>
+        <option value="10">Basic</option>
+        <option value="20">Ultra</option>
+        <option value="100">Modafuck</option>
+      </select>
+      <br><br>
+
+      <!-- O input pode ser botão também. Dois exemplos são os de enviar
+      e o de reiniciar (limpar) os campos. -->
+      <input type="submit" value="Registrar">
+      <input type="reset"  value="Limpar">
+
+    </form>
+
+    <hr>
+
+    <!-- Exemplo de formulário prático com um action do Google para pesquisa.
+    O name "q" é definido pelo Google, por isso coloquei o mesmo de lá. -->
+    <h3>Google</h3>
+    <form action="https://www.google.com.br/search" method="get">
+      <label>Pesquisar por</label>
+      <input type="text" name="q" value="">
+      <input type="submit" value="Ir">
+    </form>
+
+  </body>
+</html>
