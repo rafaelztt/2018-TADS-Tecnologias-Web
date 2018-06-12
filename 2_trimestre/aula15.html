@@ -10,7 +10,21 @@
 
       $(document).ready( function(){
 
-          alert("Ok!");
+          $("#btnIr").click( function(){
+
+            if( $("input[name='q']").val() == "" ){
+              alert("Preencha alguma coisa para pesquisar!");
+
+            } else if( $("input[name='q']").val().length < 3 ){
+              alert("Digite mais do que 2 caracteres");
+
+            } else {
+
+                $("#formGoogle").submit();
+
+            }
+
+          });
 
       });
 
@@ -25,7 +39,7 @@
     O method como esses dados serão enviados:
       get - manda pela url
       post - manda empacotado -->
-    <form action="" method="post">
+    <form id="formRegistrar" action="" method="post">
 
       <!-- label serve só para apresentar um texto na tela junto com o campo -->
       <label>Nascimento</label><br>
@@ -69,10 +83,11 @@
     <!-- Exemplo de formulário prático com um action do Google para pesquisa.
     O name "q" é definido pelo Google, por isso coloquei o mesmo de lá. -->
     <h3>Google</h3>
-    <form action="https://www.google.com.br/search" method="get">
+    <form id="formGoogle" action="https://www.google.com.br/search" method="get">
       <label>Pesquisar por</label>
       <input type="text" name="q" value="">
-      <input type="submit" value="Ir">
+
+      <input type="button" value="Ir" id="btnIr">
     </form>
 
   </body>
