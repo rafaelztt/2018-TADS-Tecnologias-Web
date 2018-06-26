@@ -10,14 +10,23 @@
 
       $("button").click(function(event) {
         /* Act on the event */
+
+        // Pega o valor do campo com id "num1" e armazena em uma variável
         var num = $("#num1").val();
 
+        // Converte de string para float
         num = parseFloat(num);
 
+        // Cria uma variável para armazenar o resultado da operação
         var dobro = num * 2
 
-        alert("O dobro de "+num+" é "+dobro);
+        // Exibe uma mensagem de alerta
+        alert("O dobro de " + num + " é " + dobro);
+
+        // Exemplo para colocar a mensagem em um elemento da tela, como um p, span, label, etc
+        //$("elemento").text("O dobro é "+dobro);
       });
+
     });
 
     </script>
