@@ -1,9 +1,14 @@
-git clone https://github.com/rafaelztt/tecnologias_web.git
+Baixar projeto do git
+git clone https://github.com/.....
 
+Adicionar novas modificações/arquivos
 git add *
 
+Configurar seu email
 git config user.email "rafael.zottesso@ifpr.edu.br"
 
+Registrar um commit
 git commit -m ".."
 
+Enviar o projeto para o Github
 git push origin master
