@@ -17,7 +17,7 @@
     <script type="text/javascript">
 
       $(document).ready(function() {
-        alert("Ok");
+        // alert("Ok");
       });
 
     </script>
@@ -25,12 +25,27 @@
   </head>
   <body>
 
-    <h2>Introdução ao Bootstrap</h2>
+    <!-- a classe container utiliza uma parte da tela, enquanto o container-fluid ocupa
+    toda a largura da tela -->
+    <div class="container">
 
-    <p>
-      Veja as principais classes de
-      utilidades do Bootstrap.
-    </p>
+      <h2 class="border-bottom border-primary bg-light">Introdução ao Bootstrap</h2>
+
+      <!-- Para criar um padding basta usar a classe p-N, onde n é um número de 0 a 5.
+      A mesma coisa vale para a margem usando a classe m -->
+      <p class="p-2 m-2 border">
+        Veja as principais classes de
+        utilidades do Bootstrap.
+      </p>
+
+      <!-- bordas da cor amarela, cor de fundo clara e bordas arredondadas
+      A div abaixo tem 3 no padding e 3 na margem, bordas em todos os cantos, -->
+      <div class="m-3 p-3 border border-warning bg-light rounded">
+        <!-- o texto do span está negrito -->
+        <span class="font-weight-bold">Atenção!</span> Este é um exemplo de alerta!
+      </div>
+
+    </div>
 
   </body>
 </html>
