@@ -25,7 +25,7 @@
       <h2>Cadastro de usuário</h2>
 
       <!-- define o arquivo de destino dos dados do formulário -->
-      <form action="controle/usuario.php" method="post">
+      <form action="usuario.php" method="post">
 
         <label for="">Nome</label><br>
         <input type="text" name="nome" value="">
