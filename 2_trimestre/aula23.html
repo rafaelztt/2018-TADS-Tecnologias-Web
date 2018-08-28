@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 23 - Validação otimizada de Formulários</title>
+
+    <script src="js/jquery-3.3.1.js"> </script>
+
+    <script type="text/javascript">
+      $(document).ready( function(){
+
+          // Identificar o seu formulário
+          // coloque o event como parâmetro
+          $("form").submit( function(event){
+
+
+            // Para cada elemento que tem a classe obrigatório
+            $(".obrigatorio").each(function(){
+
+              // Executa este código para cada um dos elementos com a classe obrigatorio
+
+              // Verifica o valor (preenchido) no campo
+              if( $(this).val() == "" ){
+
+                // Evita o envio do formulário
+                event.preventDefault();
+
+                // Criação de uma variável para armazenar o "name" de cada campo
+                // o attr pode buscar o valor atual de alguma propriedade
+                var campo = $(this).attr("name");
+
+                // Concatenação da mensagem de alerta
+                alert("O campo " + campo + " é obrigatório!");
+
+                // Usar o .html() ou o .append() para exibir o texto em um único local
+
+
+              }
+
+            });
+
+
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <h3>Cadastro</h3>
+
+    <form action="" method="post">
+
+      <!-- Colocar a classe "obrigatorio" em cada um dos campos que deseja -->
+
+      <label>Nascimento</label><br>
+      <input class="obrigatorio" type="date" name="nasc" value="">
+      <br>
+
+      <label>Usuário</label><br>
+      <input class="obrigatorio" type="text" name="usuario" value="" placeholder="Digite um nome de usuário"><br>
+
+      <label>E-mail</label><br>
+      <input class="obrigatorio" type="email" name="email" value="" placeholder="fulano@tal.com"><br>
+
+      <label>Senha</label><br>
+      <input class="obrigatorio" type="password" name="senha" value="" placeholder="Máximo 8 caracteres" maxlength="8"><br>
+
+      <label>Plano</label><br>
+      <select class="obrigatorio" name="plano">
+        <option value="">Selecione um plano</option>
+        <option value="0">Free</option>
+        <option value="10">Basic</option>
+        <option value="20">Ultra</option>
+        <option value="100">Modafuck</option>
+      </select>
+
+      <br><br>
+
+      <!-- O input pode ser botão também. Dois exemplos são os de enviar
+      e o de reiniciar (limpar) os campos. -->
+      <input type="submit" value="Registrar">
+      <input type="reset"  value="Limpar">
+
+    </form>
+
+  </body>
+</html>
